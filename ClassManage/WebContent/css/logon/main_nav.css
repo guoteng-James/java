@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* 以下实际使用若已初始化可删除 .mav height父级需逐级设置为100%*/
+body,html{height: 100%;background: #263238;}
+body,ul{margin:0;padding:0}
+body{font:14px "微软雅黑","宋体","Arial Narrow",HELVETICA;-webkit-text-size-adjust:100%;} 
+li{list-style:none} 
+a{text-decoration:none; }
+/* 以上实际使用若已初始化可删除 */
+
+/* mav */
+.mav{width: 220px;height: 500px;background: #263238;transition: all .3s;background: url(/ClassManage/images/logon/home.png) no-repeat ;}
+.mav a{display: block;overflow: hidden;padding-left: 20px;line-height: 46px;max-height: 46px;color: #ABB1B7;transition: all .3s;}
+.mav a span{margin-left: 30px;}
+.mav-item{position: relative;color: white;}
+.mav-item.mav-show{border-bottom: none;}
+.mav-item ul{display: none;background: rgba(0,0,0,.1);}
+.mav-item.mav-show ul{display: block;}
+.mav-item>a:before{content: "";position: absolute;left: 0px;width: 2px;height: 46px;background: #34A0CE;opacity:0;transition: all .3s;}
+.mav .mav-icon{font-size: 20px;position: absolute;margin-left:-1px;}
+.mav-more{float:right;margin-right: 20px;font-size: 12px;transition: transform .3s;}
+.mav-show .mav-more{transform:rotate(90deg);}
+.mav-show,.mav-item>a:hover{color: #FFF;background:rgba(0,0,0,.1);}
+.mav-show>a:before,.mav-item>a:hover:before{opacity:1;}
+.mav-item li:hover a{color: #FFF;background: rgba(0, 0, 0,.1);}
+
+/* mav-mini */
+.mav-mini.mav{width: 60px;}
+.mav-mini.mav .mav-icon{/* margin-left:-2px; */}
+.mav-mini.mav .mav-item>a span{display: none;}
+.mav-mini.mav .mav-more{margin-right: -20px;}
+.mav-mini.mav .mav-item ul{position: absolute;top:0px;left:60px;width: 180px;z-index: 99;background:#3C474C;overflow: hidden;}
+.mav-mini.mav .mav-item:hover{background:rgba(255,255,255,.1);}
+.mav-mini.mav .mav-item:hover .mav-item a{color:#FFF;}
+.mav-mini.mav .mav-item:hover a:before{opacity:1;}
+.mav-mini.mav .mav-item:hover ul{display: block;}
+
+/*home*/
+.light_font{color: #fff; font-size:18;text-shadow:0 0 5px #00ffff, 0 0 10px #CCCCCC, 0 0 15px #CCCCCC, 0 0 20px #80ffff, 0 0 25px #80ffff, 0 0 30px #80ffff, 0 0 50px #80ffff, 0 0 80px #80ffff, 0 0 100px #80ffff, 0 0 150px #80ffff;}
+.home_page{color:#fff;width: 550px;}
+.home_link{text-color:#00b4ff;padding: 50 0 0 50;float: left;}
+.home_page a:link{color:#fff;}
+.home_page a:hover{color:#00b4ff;}
+.home_page a:visited{color:#fff;}
+.home_information{float: right;padding: 55 20 0 0;}
+.login_image{width:2.5cm; height:3.5cm;} 
+.login_image img{width:2.5cm; height:3.5cm;}
+.login_i{text-align: center;} 
+
+
+
+
+

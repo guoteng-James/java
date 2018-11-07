@@ -1,0 +1,25 @@
+tr{
+	text-align: right;
+	}
+	
+.student{
+	float:left;
+	margin:0px;
+	width:300px;
+	height:430px; 
+	padding: 30px 0px 0px 0px;
+	color:#fff;text-align:center;
+	box-shadow: #fff 0px 0px 10px;
+	background: rgba(0,0,0, 0.7);
+	opacity:0.8;
+	}
+.login_image{
+	width:2.5cm; 
+	height:3.5cm;
+	padding: 0px 0px 10px 30%;
+	} 
+
+.login_image img{
+	width:2.5cm; 
+	height:3.5cm;
+	}

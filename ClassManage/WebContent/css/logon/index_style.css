@@ -1,0 +1,122 @@
+body{
+	background: url(../../images/logon/maidou.jpeg) no-repeat center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+input[type="text"],input[type="password"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 80%;
+  height: -webkit-calc(3em + 2px);
+  height: calc(3em + 2px);
+  margin: 0 0 1em;
+  padding: 1em;
+  border: 1px solid #CCCCCC;
+  border-radius: 20px;
+  background: #000;
+  resize: none;
+  outline: none;
+  filter: Alpha(opacity=30);
+  opacity: 0.6;
+  color: #FFFFFF;
+}
+input[required]:focus {
+  border-color: #00b4ff;
+}
+input[required]:focus + label[placeholder]:before {
+  color: #00B4FF;
+}
+input[required]:focus + label[placeholder]:before,
+input[required]:valid + label[placeholder]:before {
+  -webkit-transition-duration: .2s;
+  transition-duration: .2s;
+  -webkit-transform: translate(0, -1.5em) scale(0.9, 0.9);
+  -ms-transform: translate(0, -1.5em) scale(0.9, 0.9);
+  transform: translate(0, -1.5em) scale(0.9, 0.9);
+}
+input[required]:invalid + label[placeholder][alt]:before {
+  content: attr(alt);
+}
+input[required] + label[placeholder] {
+  display: block;
+  pointer-events: none;
+  line-height: 2.3em;
+  margin-top: -webkit-calc(-3em - 2px);
+  margin-top: calc(-3em - 2px);
+  margin-bottom: -webkit-calc((3em - 1em) + 2px);
+  margin-bottom: calc((3em - 1em) + 2px);
+}
+input[required] + label[placeholder]:before {
+  content: attr(placeholder);
+  display: inline-block;
+  margin: 0 -webkit-calc(1em + 2px);
+  margin: 0 calc(1em + 2px);
+  padding: 0;
+  color: #fff;
+  white-space: nowrap;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(#000));
+  background-image: -webkit-linear-gradient(top, #000, #000);
+  background-image: linear-gradient(to bottom, #000, #000);
+  -webkit-background-size: 100% 5px;
+  background-size: 100% 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.login_div{
+  width:400px;
+  height:380px;
+  margin:12% auto;
+  border-radius:40px;
+  box-shadow: #fff 0px 0px 30px;
+  background: rgba(0,0,0, 0.7);
+  
+  /*��ת*/
+  transition: All 0.4s ease-in-out;
+  -webkit-transition: All 0.4s ease-in-out;
+  -moz-transition: All 0.4s ease-in-out;
+  -o-transition: All 0.4s ease-in-out;
+}
+/*360����ת*/
+.login_div_tran{
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+}
+
+.button{ 
+  color:#00b4ff;
+  text-transform: uppercase;
+  width: 80px;
+  height: 40px;
+  border: 1px solid #CCCCCC;
+  background: -webkit-linear-gradient(90deg, #000, #000, #00b4ff, #00b4ff);
+  background:    -moz-linear-gradient(90deg, #000, #000, #00b4ff, #00b4ff);
+  background:      -o-linear-gradient(90deg, #000, #000, #00b4ff, #00b4ff);
+  background:         linear-gradient(90deg, #000, #000, #00b4ff, #00b4ff);
+  background-size: 300% 300%;
+  background-position: 1% 50%;
+  transition: all 1s ease;
+  -webkit-transition: background 0.5s ease;
+  outline: none;
+  cursor:pointer;
+  border-radius:40px;
+  filter: Alpha(opacity=30);
+  opacity: 0.7;
+}
+.button:hover{
+	background: #00b4ff;
+	color: #fff;
+}
+a{
+	color: #FFFFFF;
+}
+a:hover{
+	color: #00B4FF;
+}

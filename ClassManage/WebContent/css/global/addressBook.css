@@ -1,0 +1,11 @@
+a:link{color:#fff;}
+a:hover{color:#00b4ff;}
+a:visited{color:#fff;}
+.find{float:left;width:315px;height:40px; margin: 0px;padding: 0px 0px 0px 15px;background: #00b4ff;}
+.find_text{width:180px; height: 25px;margin: 0px;outline: none;border-left:solid 3px #00b4ff;border-top: solid 4.8px #00b4ff;border-bottom:solid 2px #00b4ff;}
+.find_btn{ color:#fff;background:#00b4ff;border:solid 0.2px #00b4ff;border-top:solid 1.5px #00b4ff;border-bottom:solid 3px #00b4ff;font-size:18px;width: 60px;height: 32px;outline: none;cursor:pointer;margin: 3px 0px 0px -11px;}
+.insert_btn{margin: 5px 0px 10px 40px;}
+.all{top:10px;word-break: break-all;word-wrap: break-word; width:100%; overflow:auto;}
+.student_page{float:left;margin:5px 0px 28px 30px;width:230px;height:300px;padding: 50px 0px 0px 0px;color:#fff;text-align:center;border-radius:30px;box-shadow: #fff 0px 0px 10px;background: rgba(0,0,0, 0.7);}
+.login_image{width:2.5cm; height:3.5cm;padding: 0px 0px 20px 30%;} 
+.login_image img{width:2.5cm; height:3.5cm;}

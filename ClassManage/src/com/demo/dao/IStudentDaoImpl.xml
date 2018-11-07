@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.4//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.dao.IStudentDao">
+<select id="findStudentByNumberAndPwd" parameterType="com.demo.entity.Student" resultType="com.demo.entity.Student">
+select Id,Sname,Password,Manager from tb_student 
+  where Number=#{Number} and Password=#{Password}
+</select>
+<select id="findStudentById" resultType="com.demo.entity.Student">
+select Id,Sname,Password,WJM_pwd,Sex,Number,Telephone,Address,Dormitory,Manager,Sphoto from tb_student 
+where Id=#{0} ORDER BY Number ASC
+</select>
+<update id="modifyStudentPwd" parameterType="com.demo.entity.Student">
+update tb_student set Password=#{Password},Wjm_pwd=#{Wjm_pwd} where Id=#{Id}
+</update>
+<update id="modifyStudentPhoto" parameterType="com.demo.entity.Student">
+update tb_student set Sphoto=#{Sphoto} where Id=#{Id}
+</update>
+<update id="editStudent">
+update tb_student set Sname=#{sname},
+  Number=#{number},
+  Sex =#{sex},
+  Telephone =#{telephone},
+  Address =#{address},
+  Dormitory =#{dormitory}
+  where Id =#{id}
+</update>
+<select id="findAllStudent" resultType="com.demo.entity.Student">
+select Id,Sname,Password,WJM_pwd,Sex,Number,Telephone,Address,Dormitory,Manager,Sphoto from tb_student ORDER BY Number ASC
+</select>
+<select id="findSomeStudentByNumber" resultType="com.demo.entity.Student">
+select Id,Sname,Password,WJM_pwd,Sex,Number,Telephone,Address,Dormitory,Manager,Sphoto from tb_student 
+where Number=#{0} ORDER BY Number ASC
+</select>
+<select id="findSomeStudentBySname" resultType="com.demo.entity.Student">
+select Id,Sname,Password,WJM_pwd,Sex,Number,Telephone,Address,Dormitory,Manager,Sphoto from tb_student 
+where Sname like CONCAT('%',#{0},'%')
+</select>
+<select id="findSomeStudentByAddress" resultType="com.demo.entity.Student">
+select Id,Sname,Password,WJM_pwd,Sex,Number,Telephone,Address,Dormitory,Manager,Sphoto from tb_student 
+where Address like CONCAT('%',#{0},'%')
+</select>
+<insert id="addOneStudent">
+INSERT INTO `tb_student` (`Id`, `Sname`, `Password`,`Wjm_pwd`, `Sex`, `Number`, `Telephone`, `Address`, `Dormitory`, `Manager`, `Sphoto`) 
+VALUES (NULL, #{sname}, #{password}, #{wjm_pwd},#{sex}, #{number}, #{telephone}, #{address}, #{dormitory}, #{manager}, 'withoutphoto.png')
+</insert>
+<delete id="deleteOne">
+DELETE FROM `tb_student` WHERE `Id`=#{0}
+</delete>
+<update id="modifyOne">
+update tb_student set Sname=#{sname},
+  Number=#{number},
+  Sex =#{sex},
+  Telephone =#{telephone},
+  Address =#{address},
+  Dormitory =#{dormitory},
+  Password =#{password},
+  Wjm_pwd =#{wjm_pwd},
+  Manager =#{manager} 
+  where Id =#{id}
+</update>
+</mapper>

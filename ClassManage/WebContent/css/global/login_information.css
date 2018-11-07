@@ -1,0 +1,33 @@
+body{width:600px;margin: 0 auto;}
+a:link{color:#fff;}
+a:hover{color:#00b4ff;}
+a:visited{color:#fff;}
+.t{color: #fff;}
+.u_t{display: none;}
+.information{float: left;}
+.login_image{width:2.5cm;padding:50px; float: right;} 
+.login_image img{width:2.5cm; height:3.5cm;}
+.button{ 
+  color:#00b4ff;
+  text-transform: uppercase;
+  width: 80px;
+  height: 40px;
+  border: 1px solid #CCCCCC;
+  background: -webkit-linear-gradient(90deg, #000, #000, #00b4ff, #00b4ff);
+  background:    -moz-linear-gradient(90deg, #000, #000, #00b4ff, #00b4ff);
+  background:      -o-linear-gradient(90deg, #000, #000, #00b4ff, #00b4ff);
+  background:         linear-gradient(90deg, #000, #000, #00b4ff, #00b4ff);
+  background-size: 300% 300%;
+  background-position: 1% 50%;
+  transition: all 1s ease;
+  -webkit-transition: background 0.5s ease;
+  outline: none;
+  cursor:pointer;
+  border-radius:5px;
+  filter: Alpha(opacity=30);
+  opacity: 0.7;
+}
+.button:hover{
+	background: #00b4ff;
+	color: #fff;
+}

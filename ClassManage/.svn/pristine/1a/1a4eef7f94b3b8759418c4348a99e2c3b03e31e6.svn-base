@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.dao.IPhotoDao">
+<select id="findAllPhoto" resultType="com.demo.entity.Photo">
+select pid,Pname,remarks from tb_photo ORDER BY pid DESC
+</select>
+<insert id="insertOnePhoto" parameterType="com.demo.entity.Photo">
+INSERT INTO `tb_photo` (`pid`, `Pname`, `remarks`) 
+VALUES (NULL, #{Pname}, #{remarks})
+</insert>
+<delete id="deleteOnePhoto">
+  delete from tb_photo where pid = #{0}
+ </delete>
+ <select id="findPhotobyremarks" resultType="com.demo.entity.Photo">
+ select pid,Pname,remarks from tb_photo where remarks like CONCAT('%',#{0},'%') ORDER BY pid DESC
+ </select>
+ <select id="findPhotoByPid" resultType="com.demo.entity.Photo">
+ select pid,Pname,remarks from tb_photo where pid = #{0}
+ </select>
+</mapper>
